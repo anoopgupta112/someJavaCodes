@@ -1,0 +1,22 @@
+package HomeWork;
+class questions_sum{
+	public static int sum(int n) {
+		if(n<10) {
+		 return n;}
+		else {
+		return (n%10)+sum(n/10);}
+		
+	}
+}
+
+
+public class recoursive {
+	
+	
+	public static void main(String[] args) {
+		
+		System.out.println(questions_sum.sum(2165));
+		
+	}
+
+}

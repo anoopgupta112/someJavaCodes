@@ -1,0 +1,54 @@
+package Object_Oriented_Programing;
+
+class Player {
+	
+
+
+	private String playerName;
+	private int hitPoint;
+	private boolean alive;
+	private int damage;
+public void getHit(int damage) {
+	this.damage = damage ;
+}
+public int setHit() {
+	
+	return hitPoint - damage;
+}
+public void getAlive(boolean alive) {
+	this.alive = alive;
+}
+public boolean setAlive() {
+	if(hitPoint == 0) {
+		alive = false;
+	}
+	
+	
+	return alive;
+}
+public String getPlayer() {
+	return playerName;
+}
+public int gethitPoint() {
+	return hitPoint;
+}
+public Player(String playerName, int hitPoint ){
+	this.playerName = playerName;
+	this.hitPoint = hitPoint;
+	this.alive = true;
+	
+}
+public Player(String playerName){
+	this.playerName = playerName;
+}}
+
+public class Homework{
+
+        public static void main(String[] args) {
+        	Player details = new Player("anoop");
+        	System.out.print(details);
+	
+}
+}
+
+

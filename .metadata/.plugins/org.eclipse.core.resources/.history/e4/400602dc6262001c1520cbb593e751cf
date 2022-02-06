@@ -1,0 +1,36 @@
+package BitwiseOperator;
+
+public class countSetbits {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Set bit count: " +getSetBitCount(7) );
+		System.out.println("diffrent bit count: " +diffrentSetbits(5, 7) );
+
+	}
+	public static int getSetBitCount(int n) {
+		int count = 0, pow = 1;
+		for (int i =0 ; i<32;i++) {
+			if((n & pow)> 0) {
+				count++;
+			}
+			pow <<= 1;
+		}
+		
+		return count;
+	}
+	
+	public static int diffrentSetbits(int n1, int n2) {
+		
+		int count = 0,pow = 1;
+		for(int i = 0;i<32;i++) {
+			if((n1^n2)==1) {
+				count++;
+			}
+			pow <<= 1;
+		}
+		
+		
+		return count;
+	}
+}

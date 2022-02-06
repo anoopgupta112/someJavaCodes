@@ -1,0 +1,16 @@
+package HomeWork;
+class question1_sum{
+	public static int sum(int n) {
+		return 0;
+	}
+}
+public class recoursive {
+	
+	
+	public static void main(String[] args) {
+		
+		System.out.println(question1_sum.sum(21));
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package polymerHW;
+
+public class Source {
+	public static void main(String[] args) {
+		ArrayBuilder b =new ArrayBuilder();
+		int[] arr = b.getArray(10, 20, 30);
+		for (int ele: arr) {
+			System.out.println(ele);
+		}
+	}
+}

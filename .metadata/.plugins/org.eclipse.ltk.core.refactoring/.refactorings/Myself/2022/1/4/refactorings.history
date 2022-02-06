@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;treeData.ch&apos; to &apos;source&apos;&#x0D;&#x0A;- Original project: &apos;Myself&apos;&#x0D;&#x0A;- Original element: &apos;treeData.ch&apos;&#x0D;&#x0A;- Renamed element: &apos;treeData.source&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ch&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;treeData{ch.java[ch" matchStrategy="1" name="source" qualified="false" references="true" similarDeclarations="false" stamp="1642865291755" textual="false" version="1.0"/>
+</session>

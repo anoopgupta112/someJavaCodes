@@ -1,0 +1,9 @@
+package flight_reservation;
+
+public class Contact {
+	public String mob = "34223";
+	public Contact(String mob) {
+		this.mob = mob;
+	}
+
+}

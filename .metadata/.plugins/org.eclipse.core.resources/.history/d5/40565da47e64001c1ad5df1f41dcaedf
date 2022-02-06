@@ -1,0 +1,25 @@
+package flight_reservation;
+
+public class Ticket {
+	int PNR_Number, sheatNumber, FlightNumber;
+	float price;
+	String departure, destination;
+	Passenger passenger;
+	
+	public Ticket(Ticket t) {
+	this.passenger = new Passenger(t.passenger);
+	
+	}
+		
+		
+	
+	
+	
+public class TouristTicket extends Ticket{
+	
+}	
+public class RegularTicket{
+	
+}
+}
+

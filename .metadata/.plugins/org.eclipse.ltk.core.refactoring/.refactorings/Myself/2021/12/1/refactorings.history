@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;hwCodes.Node.java&apos; to &apos;singleyLinkedList.java&apos;&#x0D;&#x0A;- Original project: &apos;Myself&apos;&#x0D;&#x0A;- Original element: &apos;hwCodes.Node.java&apos;&#x0D;&#x0A;- Renamed element: &apos;hwCodes.singleyLinkedList.java&apos;" description="Rename compilation unit &apos;Node.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;hwCodes{Node.java" name="singleyLinkedList.java" references="false" stamp="1640871339306" version="1.0"/>
+</session>

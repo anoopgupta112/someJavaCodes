@@ -1,0 +1,67 @@
+package flight_reservation;
+
+
+
+public class Passenger{
+
+	
+	public  int mob;
+	int id;
+	private static int idCounter;
+	 String name;
+	String email;
+	Contact contact;
+	
+	public Passenger() {}
+	public Passenger(Contact contact, String name,int Id,int idCounter){
+		this.mob = contact.mob;
+		this.email = contact.email;
+		Passenger.idCounter = idCounter;
+		this.name = name;
+		this.id = Id;
+		
+	}
+	
+	public static int getPassengerCount(){
+		
+		return idCounter;
+	}
+	public boolean checkPassenger() {
+//	     we can also use arraylist here and use -> .add() for new user
+		String[] emails = {"defaultuser@gmail.com","defaultuser2@gmail.com","defaultuser3@gmail.com" };
+		for(int i = 0;i <emails.length ; i++) {
+	
+		if(email.equals(emails[i])) {
+			return true;
+	
+		}
+
+		}
+		return false;
+		
+	}
+	
+	
+
+	//nested class Contact
+	public static class Contact {
+		String email;
+		int mob;
+		public Contact(int mob,String email) {
+			this.mob = mob;
+			this.email = email;
+		}
+
+	}
+	
+	
+	
+	
+	
+
+	
+
+
+
+
+}

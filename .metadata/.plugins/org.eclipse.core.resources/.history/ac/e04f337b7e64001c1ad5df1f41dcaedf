@@ -1,0 +1,26 @@
+package flight_reservation;
+
+public class Ticket  {
+	
+	
+	
+		String hello;
+		public void setHello(String hello) {
+			this.hello = hello;
+		}
+		public String getHello() {
+			return hello;
+		}
+		
+	
+	
+	public static void main(String[] args) {
+		Ticket tt = new Ticket();
+		
+	tt.setHello("hje");
+		
+		
+		}
+
+	
+}

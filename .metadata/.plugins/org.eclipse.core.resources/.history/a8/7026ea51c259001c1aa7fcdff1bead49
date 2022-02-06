@@ -1,0 +1,14 @@
+package homeWorkEncapsulation;
+
+import java_upgrad.youtubecode;
+
+public class Source {
+	
+	
+	public static void main(String[] args) {
+	youtubecode cd = new youtubecode();
+	cd.MyEmployee cs = new cd.MyEmployee();
+	Game game = new Game("John", "Jacob");
+	game.start();
+	}
+}

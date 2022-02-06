@@ -1,0 +1,114 @@
+package HomeWork;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class StringCodeQus {
+public static void main(String[] args) {
+//	qustion 1
+//	System.out.println(reverse("Welcome"));
+	
+//	question 2
+//	System.out.println(isPalindrome("itin"));
+	
+	
+//	question3
+	
+	String str = "abc";
+     stringPermutations(str, 0, str.length()-1);
+     
+	
+//	question 4
+//	System.out.println(removeChars("the", "had"));
+}
+//question 4
+/*
+static String removeChars(String str, String secStr) {
+	
+
+	str = str.toLowerCase();
+	secStr = secStr.toLowerCase();
+	for(int i = 0;i<=str.length()-1;i++) {
+	for(int j = 0;j<= secStr.length()-1;j++) {
+	
+		if(str.charAt(i) == secStr.charAt(j) ) {
+		
+			str = str.replaceAll(Character.toString(str.charAt(i)), "");
+		}
+		
+		
+	}
+
+	}
+	
+	return str;
+ }
+*/
+
+
+//question 3
+
+public static  void stringPermutations(String str, int left, int right) { 
+	  char[] charArray = str.toCharArray();
+	  String n = charArray.toString();
+
+	
+	 
+	if(left == right) {
+		
+		System.out.println(str);
+		return;
+	}
+	for(int i = left; i<= right;i++) {
+		swap(str,i,left);
+		
+		stringPermutations(n, left+1, right);
+		swap(str,i,left);
+	}
+	
+	}
+public static void swap(String str, int l, int r) {
+	char[] c = str.toCharArray();
+	char leftChar = c[l];
+	c[l] = c[r];
+	c[r]= leftChar;
+}
+
+
+
+
+
+//question 2
+/*
+public static boolean isPalindrome(String str) {
+
+
+StringBuilder str1 = new StringBuilder(str);
+StringBuilder n = str1.reverse();
+
+
+if(n.toString().contains(str1.reverse())) {
+
+	return true;
+	}
+
+return false;
+
+	}
+
+*/
+
+
+//question 1
+/*
+public static String reverse(String str) {
+	  StringBuilder str1 = new StringBuilder(str);
+
+		str1.reverse();
+
+	
+	return str1.toString();
+	}
+	*/
+}

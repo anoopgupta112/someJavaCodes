@@ -1,0 +1,35 @@
+package HomeWork;
+class questions_sum{
+	public static int sum(int n) {
+		if(n<10) 
+		 return n;
+		
+		return (n%10)+sum(n/10);
+		
+		
+	}
+//	question 3
+	 public static int palindrome(int num, int i) {
+	      //write the logic here  
+	      if(num ==1)
+	          return num;
+	    i = String.valueOf(num).length()-1;
+	    palindrome(num,i-1);
+	    
+	    return i;
+	   
+	      
+	    }
+}
+
+
+public class recoursive {
+	
+	
+	public static void main(String[] args) {
+		
+		System.out.println(questions_sum.sum(2165));
+		
+	}
+
+}

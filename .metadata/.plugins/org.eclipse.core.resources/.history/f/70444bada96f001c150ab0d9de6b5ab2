@@ -1,0 +1,45 @@
+package HomeWork;
+
+import hwCodes.printallnum;
+
+class questions_sum{
+	public static int sum(int n) {
+		if(n<10) 
+		 return n;
+		
+		return (n%10)+sum(n/10);
+		
+		
+	}
+
+	//	question 3
+	 public static int palindrome(int num, int i) {
+	      //write the logic here  
+	      if(num ==0)
+	          return i;
+	   
+	  i = (i * 10) + (num%10);
+	 
+	    return palindrome(num/10, i);
+	   
+	      
+	    }
+}
+
+
+public class recoursive {
+	
+	
+	public static void main(String[] args) {
+		
+//		System.out.println(questions_sum.sum(2165));
+		int j = questions_sum.palindrome(1215,0);
+		System.out.println(j);
+		
+		
+	}
+
+
+	
+
+}

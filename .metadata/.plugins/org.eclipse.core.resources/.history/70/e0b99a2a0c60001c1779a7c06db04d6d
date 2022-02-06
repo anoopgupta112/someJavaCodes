@@ -1,0 +1,27 @@
+package HomeWork;
+
+import java.util.Scanner;
+
+public class StringsHW {
+	static String removeCommonChar(String str1, String str2) {
+		
+		String n = "hello";
+		int l = String.valueOf(n).length();
+		
+//		while()
+		
+		
+		return n;
+	}
+	
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+//		String str1 = sc.nextLine();
+//		String str2 = sc.nextLine();
+//		System.out.println(removeCommonChar(str1, str2));
+		String n = "hello";
+		System.out.println(String.valueOf(n).length());
+
+	}
+
+}

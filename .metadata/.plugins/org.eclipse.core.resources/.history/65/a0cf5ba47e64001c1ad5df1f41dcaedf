@@ -1,0 +1,5 @@
+package flight_reservation;
+
+public class Person extends Passenger {
+
+}

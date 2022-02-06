@@ -1,0 +1,12 @@
+package marrigeDate;
+
+public class Strings {
+	public static void main(String[] args) {
+		String a = new String("upgrad");
+				String b = new String("upgrad");
+	
+		System.out.println(a ==b);
+		System.out.println(a.equals(b));
+	}
+
+}

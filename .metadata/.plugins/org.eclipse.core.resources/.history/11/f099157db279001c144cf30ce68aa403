@@ -1,0 +1,65 @@
+package dubandCircular;
+
+//question 2
+public class questionCode {
+	Node head = null;
+	 Node tail = null;
+	 class Node {
+	        //write your code here
+	        int data;
+	        Node next;
+	      
+	        public Node(int data) {
+	            this.data=data;
+	           
+	          
+	        }
+	    }
+
+	    // This method will push the input data at the end of the list
+	    void push(int data) {
+	        //write your code here
+	        Node newNode= new Node(data);
+	       
+	        if(head==null){
+	            head=newNode;
+	            tail = newNode;  
+                newNode.next = head;  
+	        }
+	        else{
+	        	 tail.next = newNode;  
+	        	  tail = newNode;  
+	        	  tail.next = head;  
+	        }
+	        newNode.next=head;
+	    }
+	    void print() {
+	        //write your code here
+	    	   Node current = head;  
+               if(head == null) {  
+                   System.out.println("List is empty");  
+               }  
+               else {  
+                    
+                         
+            	   do{  
+           
+                       System.out.print( current.data+" ");  
+                       current = current.next;  
+                   }while(current != head);  
+                   System.out.println();  
+              
+               }  
+	
+}
+	    public static void main(String[] args) {
+	    	questionCode obj = new questionCode();
+	    	int n = 5;
+	    	int[] arr = {2,3,4,1,5};
+	    	for(int i = 0;i<n;i++) {
+	    		obj.push(arr[i]);
+	    	}
+	    	obj.print();
+	    }
+	    
+}

@@ -1,0 +1,51 @@
+package advancedata;
+
+import java.util.Scanner;
+
+import polyhw.Source;
+
+public class dublyLinkedListCircular {
+static Node head;
+static class Node{
+	int data;
+	Node next;
+	Node(int i){
+		data = i;
+		next = null;
+	}
+}
+static dublyLinkedListCircular Insert(dublyLinkedListCircular list, int data) {
+	Node new_node = new Node(data);
+	new_node.next = null;
+	if(list.head == null)
+		list.head = new_node;
+	else {
+		Node last = list.head;
+		while(last.next != head) {
+			last = last.next;
+			
+		}
+		last.next = new_node;
+	}
+	new_node.next = head;
+	
+	
+	return list;
+}
+public static void main(String[] args) {
+	dublyLinkedListCircular list = new dublyLinkedListCircular();
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	for(int i =0;i<n;i++)
+		list = Insert(list,sc.nextInt());
+	int k = sc.nextInt();
+	System.out.println(getNode(head,k).data);
+	
+}
+public static Node getNode(Node head, int k) {
+	if(k== 0)
+		return null;
+return getNode(head, k-1);
+}
+
+}

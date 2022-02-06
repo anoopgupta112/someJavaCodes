@@ -1,0 +1,22 @@
+package HomeWork;
+
+public class perfectSqure {
+	 double countSquares(int a, int b)
+	    {
+	        return (Math.floor(Math.sqrt(b)) - Math.ceil(Math.sqrt(a)) + 1);
+	    }
+	}
+	 
+	
+//Driver Code
+	class PerfectSquares {
+	    public static void main(String[] args)
+	    {
+	        int a = 9, b = 25;
+	       perfectSqure obj = new perfectSqure();
+	        System.out.print("Count of squares is " + (int)obj.countSquares(a, b));
+	    }
+
+		
+}
+

@@ -1,0 +1,11 @@
+package flight_reservation;
+
+public class Passenger{
+public static void main(String[] args) {
+	Address address = new Address("hele", "jull", "chull");
+	Address address1 = new Address("hel", "jul", "chll");
+
+	System.out.println(address.city+""+address1.state);
+}
+	
+}

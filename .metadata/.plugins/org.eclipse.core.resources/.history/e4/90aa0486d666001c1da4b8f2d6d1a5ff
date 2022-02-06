@@ -1,0 +1,17 @@
+package flight_reservation;
+
+
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Passenger p = new Passenger("anoop",1);
+		
+		Ticket tourist = new Ticket(2313,"anoop", 1234567890, 32, 32352, "Delhi", "Lucknow", 3000);
+		
+		tourist.TouristTicketInfo();
+		
+	
+	}
+
+}

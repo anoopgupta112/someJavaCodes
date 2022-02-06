@@ -1,0 +1,49 @@
+package Youtube;
+
+abstract class vichle {
+	abstract void start();
+	
+	abstract void start2(int a, int b);
+
+	void problem() {
+		System.out.println("we can make it");
+	}
+
+}
+class car extends vichle{
+	 void start() {
+		 
+		 System.out.println("car");
+	 }
+	 
+	 
+}
+class scooter extends vichle{
+	int a =10;
+	int b =12;
+	void start2(int a, int b) {
+		System.out.println(b);
+	}
+	void start() {
+		System.out.println("scooter");
+	}
+	void working()
+{
+		System.out.println("scooter working");
+}
+	}
+class abstractclass{
+	public static void main(String[] args) {
+		car c = new car();
+		scooter s = new scooter();
+		c.start2(10, 12);
+		c.start();
+		s.start();
+		c.problem();
+		s.working();
+		
+		
+	}
+	}
+	
+

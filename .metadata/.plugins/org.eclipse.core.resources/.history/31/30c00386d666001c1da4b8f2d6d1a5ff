@@ -1,0 +1,31 @@
+package flight_reservation;
+
+public class Passenger{
+
+	
+	int id;
+	String name;
+	//first
+	public Passenger(String name,int Id){
+		this.name = name;
+		this.id = Id;
+	}
+	
+	//second 
+	public Passenger(Passenger passenger) {
+		
+		
+		this.name = passenger.name;
+		this.id = passenger.id;
+		
+	}
+	
+	
+	
+
+	
+
+
+
+
+}

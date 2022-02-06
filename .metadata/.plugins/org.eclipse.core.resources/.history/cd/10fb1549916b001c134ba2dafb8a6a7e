@@ -1,0 +1,53 @@
+package HomeWork;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class StringHwAndCode {
+	
+public static void main(String[] args) {
+	String str1 = "education";
+	String str2 = "rate";
+	System.out.println(removeCommanChar(str1,str2));
+}	
+
+
+// question 1 homework of String ----not solved
+	static String removeCommanChar(String str1, String str2) {
+		
+		char a='\0';
+		
+		StringBuilder sb = new StringBuilder(str1);
+		String resultString = null;
+		for(int i = 0;i<str2.length();i++) {
+			for(int j = 0;j<str1.length();j++) {
+				
+				
+				if(str2.charAt(i) == str1.charAt(j)) {
+					
+				
+					a = str1.charAt(j);
+					
+					
+			System.out.println(a);
+			String s = Character.toString(a);
+			String b = str1.replace(s, "");
+		
+			
+//			sb.deleteCharAt(j);
+//			resultString =  sb.toString();
+//			
+//			System.out.println(resultString);
+			
+				
+				
+				
+				}
+				
+				
+				
+			}
+		}
+		return b;
+	}
+}

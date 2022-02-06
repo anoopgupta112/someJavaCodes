@@ -1,0 +1,13 @@
+package marrigeDate;
+
+public class childclass1{
+	public static void main(String[] args) {
+		int a = 2, b = 3;
+	int add = main.addnum(3,3);
+	
+	}
+	public static int addnum(int a, int b) {
+		return a+b;
+		
+	}
+}

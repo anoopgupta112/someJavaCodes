@@ -1,0 +1,19 @@
+package HomeWork;
+
+import org.w3c.dom.Node;
+
+public class hwOfstack {
+
+public Node head;
+class Node{
+	int val;
+	Node next;
+	Node(int val){
+		this.val = val;
+		next = null;
+	}
+}
+public hwOfstack() {
+	this.head = null;
+}
+}

@@ -1,0 +1,22 @@
+package marrigeDate;
+
+public class main {
+	public static void main(String[] args) {
+		int a = 5, b = 10;
+		int sum = addnum(a,b);
+//		int factor = factorial(a);
+		
+		
+		System.out.print(sum);
+	}
+	public static int addnum(int a, int b) {
+		return a+b;
+		
+	}
+//	public static  int factorial(int a) {
+//		int factorial *2
+//		return factorial;
+//	
+//	}
+
+}

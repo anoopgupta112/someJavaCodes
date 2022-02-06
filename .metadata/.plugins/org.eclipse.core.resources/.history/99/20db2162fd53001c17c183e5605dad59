@@ -1,0 +1,7 @@
+package marrigeDate;
+
+public class childclass1{
+	int add = main.addnum(3,3);
+	
+
+}

@@ -1,0 +1,67 @@
+package polymerHW;
+
+public class Source2 {
+	
+	
+	/*
+	 * TODO 1: Instantiate the onlinePaymentService attribute using the Anonymous class.
+	 * The anonymous class should extend the PaymentService class and override the pay(int)
+	 * method to return the following output.
+	 * 		paid <money> rupees online
+	 * 
+	 * 		For example,
+	 * 		paid 1000 rupees online
+	 * 
+	 * Note: Keep the onlinePaymentService public and static, otherwise the testcases would fail.
+	 */
+	public static PaymentService2 onlinePaymentService = new PaymentService2() {
+		public String pay(int money) {
+			return "paid " + money + " rupees online";
+		}
+	};
+	
+	public static void main(String[] args) {
+//		System.out.println(onlinePaymentService.pay(1000));
+		
+		
+		int[] arr = {1,4,43,22,21,3,2};
+		int[] arr1 = {-1,-3,-12};
+		
+		System.out.println(getsecond(arr));
+//		System.out.println(getsecond(arr1));
+
+		
+	}
+	
+	public static int getsecond(int[] arr){
+		
+        int max = Integer.MIN_VALUE;
+        int secondMax = Integer.MIN_VALUE;
+       
+        
+        System.out.println("Max number is : "+max);
+        System.out.println("Second Max number is : "+secondMax);
+
+        for(int i =0; i< arr.length; i++) {
+        	if(arr[i]>max) {
+        		System.out.println(max +"  "+ arr[i]);
+        		max = arr[i];
+        		secondMax = max;
+        	
+            max = Math.max(max, arr[i]);
+            
+            
+        	}
+        	else if(arr[i]>secondMax && arr[i]<max) {
+        		System.out.println(arr[i]);
+        		secondMax = arr[i];
+        		
+        	}
+        }
+       
+      
+        return secondMax;
+        
+        
+    }
+}

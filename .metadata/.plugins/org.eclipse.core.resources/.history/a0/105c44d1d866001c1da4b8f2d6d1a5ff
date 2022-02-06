@@ -1,0 +1,19 @@
+package flight_reservation;
+
+
+
+public class Main {
+	public static void main(String[] args) {
+		
+		
+		
+		Ticket ticket = new Ticket(1234567890, 32, 32352, "Delhi", "Lucknow", 3000);
+		
+		
+//		ticket.TouristTicketInfo();
+		ticket.RegularTicketInfo();
+		
+	
+	}
+
+}

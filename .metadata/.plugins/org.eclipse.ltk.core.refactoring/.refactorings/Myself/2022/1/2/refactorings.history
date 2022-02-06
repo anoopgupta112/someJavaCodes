@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;HomeWork.hwOfstack&apos; to &apos;stackCode&apos;&#x0D;&#x0A;- Original project: &apos;Myself&apos;&#x0D;&#x0A;- Original element: &apos;HomeWork.hwOfstack&apos;&#x0D;&#x0A;- Renamed element: &apos;HomeWork.stackCode&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;hwOfstack&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;HomeWork{hwOfstack.java[hwOfstack" matchStrategy="1" name="stackCode" qualified="false" references="true" similarDeclarations="false" stamp="1641220555355" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,33 @@
+package flight_reservation;
+
+public class Passenger{
+
+	
+	static int id;
+	static String name;
+	
+	public Passenger(String name,int Id){
+		Passenger.name = name;
+		Passenger.id = Id;
+	}
+	
+	//nested class Contact
+	public static class Contact {
+		public int mob = 1234567890;
+		public Contact(int mob) {
+			this.mob = mob;
+		}
+
+	}
+	
+	
+	
+	
+	
+
+	
+
+
+
+
+}

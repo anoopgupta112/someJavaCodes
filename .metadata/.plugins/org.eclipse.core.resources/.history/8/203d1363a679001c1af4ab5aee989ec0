@@ -1,0 +1,46 @@
+package dubandCircular;
+
+//question 2
+public class questionCode {
+	Node head = null;
+
+	 class Node {
+	        //write your code here
+	        int data;
+	        Node next;
+	        Node prev;
+	        public Node(int data) {
+	            this.data=data;
+	            next =null;
+	            prev= null;
+	        }
+	    }
+
+	    // This method will push the input data at the end of the list
+	    void push(int data) {
+	        //write your code here
+	        Node newNode= new Node(data);
+	        if(head==null){
+	            head=newNode;
+	        }
+	        else{
+	            Node temp=head;
+	            while(temp.next!=head){
+	                temp=temp.next;
+	            }
+	            temp.next=newNode;
+	            newNode.prev=temp;
+	        }
+	        newNode.next=head;
+	    }
+	    void print() {
+	        //write your code here
+	        Node temp = head;
+	        if(head != null) {
+	            while (temp.next != head) {
+	                System.out.print(temp.data+" ");
+	                temp = temp.next;
+	            }
+	            System.out.print(temp.data+" ");
+	    }
+}}

@@ -1,0 +1,136 @@
+package treeData;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+
+
+import polyhw.Source;
+
+class treeNode {
+    int data;
+    treeNode left;
+    treeNode right;
+
+    public treeNode(int element) {
+        data = element;
+        left = null;
+        right = null;
+    }
+}
+
+//class used to print the left view of a binary tree
+class treeCodeQuestion {
+    static treeNode rootNode;
+
+    public static void main(String args[]) {
+        
+        Source tree = new Source();
+
+       
+        treeNode rootNode;
+
+        Scanner in = new Scanner(System.in);
+
+    
+        int n = in.nextInt(), element;
+
+      
+        Queue<treeNode> q = new LinkedList<treeNode>();
+
+ 
+        rootNode = new treeNode(in.nextInt());
+        q.add(rootNode);
+        treeNode cur = null;
+        for (int i = 1; i < n; i++) {
+
+            cur = q.remove();
+      
+            element = in.nextInt();
+            if (element != -1) {
+                cur.left = new treeNode(element);
+                q.add(cur.left);
+            }
+            i++;
+            element = in.nextInt();
+    
+            if (element != -1) {
+                cur.right = new treeNode(element);
+                q.add(cur.right);
+            }
+        }
+
+treeCodeQuestion.leftViewUtil(rootNode, q);
+
+    }
+//   static  void printleft(treeNode rootNode2, Queue<treeNode> q) {
+//    	if(rootNode2 == null) return;
+//    	printleft(rootNode2.left,q);
+//    	
+//    	System.out.println(q.peek().data);
+//    	printleft(rootNode2.right,q);
+//    	
+//    	
+//    	
+//    	
+//    	
+//    }
+    static void leftViewUtil( treeNode root, Queue<treeNode> q)
+    {
+        if (root == null)
+            return;
+     
+        // add root
+        q.add(root);
+     
+        // Delimiter
+        q.add(null);
+     
+        while (q.size() > 0)
+        {
+           treeNode temp = q.peek();
+     
+            if (temp != null)
+            {
+     
+                // Prints first node
+                // of each level
+                System.out.print(temp.data + " ");
+     
+                // add children of all nodes at
+                // current level
+                while (q.peek() != null)
+                {
+     
+                    // If left child is present
+                    // add into queue
+                    if (temp.left != null)
+                        q.add(temp.left);
+     
+                    // If right child is present
+                    // add into queue
+                    if (temp.right != null)
+                        q.add(temp.right);
+     
+                    // remove the current node
+                    q.remove();
+     
+                    temp = q.peek();
+                }
+     
+                // add delimiter
+                // for the next level
+                q.add(null);
+            }
+     
+            // remove the delimiter of
+            // the previous level
+            q.remove();
+        }
+    }
+     
+    // Function to print the leftView
+    // of Binary Tree
+   
+ 
+}

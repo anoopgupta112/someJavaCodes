@@ -1,0 +1,28 @@
+package flight_reservation;
+
+public class Flight {
+	public int flightNumber= 174;
+	public boolean IsAvailable;
+	public String flightName;
+	public int BookedSheat;
+	public int Capacity = 900;
+
+	
+	public boolean IsAvailable() {
+	if(BookedSheat == Capacity) {
+		IsAvailable =false;
+	}
+	return IsAvailable;
+	}
+	
+	public void FlightDetails(String name, int num) {
+		this.flightNumber= num;
+		this.flightName= name;
+		this.IsAvailable();
+		
+		
+	}
+	public void UpdateDetails() {
+		
+	}
+}

@@ -1,0 +1,21 @@
+package HomeWork;
+class questions_sum{
+	public static int sum(int n) {
+//		if(n<10) 
+//		 return n;
+		return n*sum(n-1);
+		
+	}
+}
+
+
+public class recoursive {
+	
+	
+	public static void main(String[] args) {
+		
+		System.out.println(questions_sum.sum(4));
+		
+	}
+
+}

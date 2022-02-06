@@ -1,0 +1,77 @@
+package HomeWork;
+
+import java.util.Scanner;
+
+class SLLNodeHw {
+    Node head;
+
+    //class to create nodes.
+    class Node {
+        int data;
+        Node next;
+
+        Node(int d) {
+            data = d;
+            next = null;
+        }
+    }
+
+    void noRepeat() {
+        Node temp = this.head;
+       
+        while(temp.next != null){
+            if(temp.data == temp.next.data  ){
+                temp.data = temp.next.next.data;
+                System.out.println("hi");
+            }
+           
+            
+            temp = temp.next;
+        }
+        //Write your code here
+    }
+
+    // Below methods would help you create a singly linked list.
+    // inserts a new node at the end of the list.
+    public void insert(int new_data) {
+        Node temp = head;
+        Node new_node = new Node(new_data);
+        if (head == null) {
+            head = new_node;
+        } else {
+            while (temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = new_node;
+        }
+    }
+
+    // Method that will print the linked list.
+    void print_list() {
+        Node node = head;
+        while (node != null) {
+            System.out.print(node.data + " ");
+            node = node.next;
+        }
+        if(head == null){
+            System.out.print("");
+        }
+    }
+    public static void main(String args[]) {
+       SLLNodeHw obj = new SLLNodeHw();
+        Scanner in = new Scanner(System.in);
+
+        int n = 4;
+
+        obj.insert(1);
+        obj.insert(3);
+        obj.insert(3);
+        obj.insert(4);
+        
+        obj.noRepeat();
+        obj.print_list();
+    }
+
+   
+}
+

@@ -1,0 +1,53 @@
+package hwCodes;
+
+import java.util.Scanner;
+import java.util.stream.IntStream;
+
+public class ArrayAllQus {
+	
+	
+	
+	
+public static void main(String[] args) {
+	Scanner s = new Scanner(System.in);
+	int size = s.nextInt();
+	int[] arr = new int[size];
+	for(int i =0;i<size;i++) {
+		arr[i] = s.nextInt();
+		
+	}
+	int answer = firstNonRepeating(arr);
+	if(answer != 0)
+		System.out.print(answer);
+	else 
+		System.out.print("All elements are repeated");
+		
+}
+static int firstNonRepeating(int arr[]) {
+	int index = 1;
+	int count = 0;
+
+	for(int i = 0;i<arr.length;i++) {
+		int[] a = IntStream.range(1, arr.length).toArray();
+
+		
+		
+	
+		if(index != arr[i] && index != a[i]) {
+	System.out.println(arr[i]);
+	break;
+	
+	
+	
+		}
+	
+index = arr[i];
+
+		
+		
+	}
+	
+	
+	return count;
+}
+}

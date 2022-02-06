@@ -1,0 +1,11 @@
+package marrigeDate;
+
+public class Strings {
+	public static void main(String[] args) {
+		String a = "upgrad", b = "upgrad";
+		int i =3, j =3;
+		System.out.println(a==b);
+		System.out.println(i ==j);
+	}
+
+}

@@ -1,0 +1,123 @@
+package flight_reservation;
+
+
+
+public class Ticket{
+	
+	private int PNR_Number, sheatNumber, FlightNumber;
+	float price;
+	String departure, destination,FlightName;
+	//aggregation
+	
+	Passenger passenger;
+	
+	
+
+	public Ticket (Flight flight, int PNR,int sheatNum, int FlightNum, String departure, String destination, float price){
+		this.FlightName = flight.flightName;
+		this.FlightNumber = flight.flightNumber;
+		
+		this.departure = departure;
+		this.destination = destination;
+		
+		this.PNR_Number = PNR;
+		this.sheatNumber = sheatNum;
+		this.price = price;
+		
+	}
+//	TouristTicketInfo---------------------------------
+void TouristTicketInfo()
+{
+	
+	TouristTicket tt = new TouristTicket("Delhi", "karolbaag", "Delhi");
+	System.out.println("City for Tourist: "+tt.city);
+	System.out.println("State for Tourist: "+tt.state);
+	
+	System.out.println("Street for Tourist: "+tt.Street);
+//	tt.UpdateTouristLocation("usa","California","usa");
+
+
+	info();
+
+}
+//RegularTicketInfo---------------------------------
+void RegularTicketInfo() {
+	RegularTicket RT = new RegularTicket(false, false, false);
+	System.out.println("Has the Passenger Ordered: "+ RT.Food);
+	System.out.println("Has the passenger ordered Snacks: "+ RT.Snacks);
+	System.out.println("Has the passenger ordered Water: "+RT.Water);
+    info();
+}
+
+
+	void info() {
+	
+		System.out.println(FlightNumber);
+		System.out.println(FlightName);
+		
+		passenger = new Passenger("rothi", 231);
+		
+		System.out.println("passenger name: " + passenger.name);
+		System.out.println("passenger Id: " +passenger.id);
+			
+		System.out.println("this is PNR no.: " +PNR_Number);
+		System.out.println("this is sheat no.:  " +sheatNumber);
+
+		System.out.println("Flight no.: "+FlightNumber);
+		System.out.println("price: " + price);
+		System.out.println("departure location " +departure);
+
+		System.out.println("destination: " + destination);
+		System.out.println("Ticket Cancelled Status : " + checkTicketCancelled());
+
+
+
+		
+	}
+	
+	//check cancelled or not-------------
+	public boolean checkTicketCancelled() {
+		if(passenger.name == "rahul") {
+			return true;
+		}
+		return false;
+	}
+	
+//	TouristTicket-----------------------------------------
+public class TouristTicket extends Address{
+//Add Hotel Address-----------------
+public TouristTicket(String city, String Street, String state) {
+		super(city, Street, state);
+		
+	}
+
+	public void UpdateTouristLocation(String city, String Street, String state) {
+		this.city = city;
+		this.Street = Street;
+		this.state = state;
+	}	
+	
+	
+	
+}	
+//RegularTicket-------------------------------
+public class RegularTicket{
+	public boolean Food;
+	public boolean Snacks;
+	public boolean Water;
+	public boolean Tea;
+	public boolean Coffee;
+	
+	public RegularTicket(boolean Food, boolean Snacks, boolean Water) {
+       this.Food = Food;
+       this.Snacks = Snacks;
+       this.Water = Water;
+	}
+	
+    public void AvailableServices(boolean Tea, boolean Coffee) {
+		this.Tea = Tea;
+		this.Coffee = Coffee;
+	}
+}
+}
+
